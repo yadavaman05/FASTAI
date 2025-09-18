@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="90" viewBox="0 0 300 90" fill="none">
+  <!-- Flower/star icon -->
+  <g fill="#6549F6">
+    <path d="M30 15 L45 30 L30 45 L15 30 Z"/>
+    <path d="M30 45 L45 60 L30 75 L15 60 Z"/>
+    <path d="M45 30 L60 45 L45 60 L30 45 Z"/>
+    <path d="M15 30 L30 45 L15 60 L0 45 Z"/>
+  </g>
+
+  <!-- Text -->
+  <text x="80" y="60" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="42" fill="#6549F6">
+    Fast.ai
+  </text>
+</svg>
