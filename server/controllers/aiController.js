@@ -182,8 +182,8 @@ export const removeImageBackground = async (req, res)=>{
 export const removeImageObject = async (req, res)=>{
     try {
         const {userId} = req.auth();
-        const {object} = req.body();
-        const {image} = req.file;
+        const {object} = req.body;
+        const image = req.file;
         const plan = req.plan;
         
 
@@ -197,7 +197,7 @@ export const removeImageObject = async (req, res)=>{
         const {public_id} = await cloudinary.uploader.upload(image.path)
         const imageUrl =  cloudinary.url(public_id, {
             transformation: [{effect: `gen_remove:${object}`}],
-            resourse_type: 'image'
+            resource_type: 'image'
         })
 
     
@@ -252,8 +252,8 @@ export const resumeReview = async (req, res)=>{
     const content = response.choices[0].message.content
 
     
-    await sql` INSERT INTO creations (user_id, prompt, content, type, )
-    VALUES (${userId}, 'Review the uploades resume', ${content}, 'resume-review' )`;
+    await sql` INSERT INTO creations (user_id, prompt, content, type )
+    VALUES (${userId}, 'Review the uploaded resume', ${content}, 'resume-review' )`;
 
     
 
